@@ -30,3 +30,23 @@ h3{
     justify-content: space-around;
     margin: 2rem;
 }
+.btn-container{
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(44, 218, 163);
+    padding: 0.9rem;
+    border-radius: 2rem;
+}
+.btn-container button{
+    background-color: transparent;
+    color:white;
+    border:none;
+    border-radius: 2rem;
+    font-size:1rem;
+    padding: 1rem;
+}
+.btn-container button:hover{
+background-color: white;
+color:rgb(44, 218, 163);
+transition: 0.3s ease-in;
+}
