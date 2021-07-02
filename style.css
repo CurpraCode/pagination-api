@@ -21,6 +21,10 @@ htm{
     margin-bottom: 30px;
     padding: 2rem 0rem;
 }
+.card:hover{
+    transform: scale(1);
+    transition: 0.8s ease-out;
+}
 h3{
     text-align: center;
 }
@@ -49,4 +53,10 @@ h3{
 background-color: white;
 color:rgb(44, 218, 163);
 transition: 0.3s ease-in;
+}
+
+@media screen and (max-width: 398px) {
+    .container {
+      flex-flow: column;
+    }
 }
