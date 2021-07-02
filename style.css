@@ -1,62 +1,78 @@
-*{
-    padding:0px;
-    margin:0px;
-    box-sizing:border-box;
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-htm{
-    background-color: aliceblue;
+htm {
+  background-color: aliceblue;
 }
-.container{
-    display: flex;
-    justify-content: space-between;
-    flex-flow: wrap;
-    align-items: center;
-    margin-top: 30px;
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: wrap;
+  align-items: center;
+  margin-top: 30px;
 }
-.card{
-    border-radius: 12.8028px;
-    background-color: #f9f9f9;
-    box-shadow: -9.1159px -18.2318px 24.3091px #fff, 9.1159px 18.2318px 24.3091px #eceef1;
-    width:200px;
-    margin-bottom: 30px;
-    padding: 2rem 0rem;
+.overall-head {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.card:hover{
-    transform: scale(1);
-    transition: 0.8s ease-out;
+.data-head div {
+  display: flex;
+  justify-content: space-around;
 }
-h3{
-    text-align: center;
+.data-head div h3 {
+  margin-left: 2rem;
+}
+.card {
+  border-radius: 12.8028px;
+  background-color: #f9f9f9;
+  box-shadow: -9.1159px -18.2318px 24.3091px #fff,
+    9.1159px 18.2318px 24.3091px #eceef1;
+  width: 200px;
+  margin-bottom: 30px;
+  padding: 2rem 0rem;
+}
+.card:hover {
+  transform: scale(1);
+  transition: 0.8s ease-out;
+}
+h3 {
+  text-align: center;
 }
 
-.card div{
-    display: flex;
-    justify-content: space-around;
-    margin: 2rem;
+.card div {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
 }
-.btn-container{
-    display: flex;
-    flex-direction: row;
-    background-color:rgb(44, 218, 163);
-    padding: 0.9rem;
-    border-radius: 2rem;
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(44, 218, 163);
+  padding: 0.4rem;
+  border-radius: 2rem;
 }
-.btn-container button{
-    background-color: transparent;
-    color:white;
-    border:none;
-    border-radius: 2rem;
-    font-size:1rem;
-    padding: 1rem;
+.btn-container button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
 }
-.btn-container button:hover{
-background-color: white;
-color:rgb(44, 218, 163);
-transition: 0.3s ease-in;
+.btn-container button:hover {
+  background-color: white;
+  color: rgb(44, 218, 163);
+  transition: 0.3s ease-in;
 }
 
 @media screen and (max-width: 398px) {
-    .container {
-      flex-flow: column;
-    }
+  .container {
+    flex-flow: column;
+  }
+  header {
+    text-align: center;
+  }
 }

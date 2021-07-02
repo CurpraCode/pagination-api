@@ -1,33 +1,31 @@
-
-
 let pages = "1";
 
 // body data response
-const getStock = async (res) => {
+const getStock = async () => {
   let urlStock = `https://jsonmock.hackerrank.com/api/stocks?page=${pages}`;
   try {
     const res = await fetch(urlStock);
-    const datas= await res.json()
+
+    let datas = await res.json();
+    // render heading pages details
+    let headHtml = "";
+    let headHtmlText = `
+    <div>
+    <h3>${datas.page}</h3>
+    <h3>${datas.per_page}</h3>
+    <h3>${datas.total}</h3>
+    <h3>${datas.total_pages}</h3>
+    </div>
+   
+    `;
+    headHtml = headHtmlText;
+    let headContainer = document.querySelector(".data-head");
+    headContainer.innerHTML = headHtml;
     return await datas.data;
   } catch (error) {
     console.log(error);
   }
 };
-
-// // heading data response
-// const getStockHead = async (res) => {
-//   let urlStock = `https://jsonmock.hackerrank.com/api/stocks?page=${pages}`;
-//   try {
-//     const res = await fetch(urlStock);
-    
-//     console.log(res.json());
-//     return await res.data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-  
-// };
-// getStockHead();
 
 // rendered body data response into html
 const renderStock = async () => {
@@ -55,12 +53,11 @@ const renderStock = async () => {
 renderStock();
 
 // onclick button listener for pagination
-document.getElementById("next").addEventListener("click", ()=>{
+document.getElementById("next").addEventListener("click", () => {
   pages++;
-  renderStock()
-})
-document.getElementById("prev").addEventListener("click", ()=>{
+  renderStock();
+});
+document.getElementById("prev").addEventListener("click", () => {
   pages--;
-  renderStock()
-})
-
+  renderStock();
+});
