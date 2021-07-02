@@ -6,6 +6,15 @@
 html {
   background-color: aliceblue;
 }
+.top,
+.overall,
+.container {
+  max-width: 1524px;
+  margin: 0 auto;
+}
+img{
+    margin-top: 1rem;
+}
 .container {
   display: flex;
   justify-content: space-between;
@@ -17,14 +26,25 @@ html {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 1rem;
 }
 .data-head div {
   display: flex;
   justify-content: space-around;
+  background-color: rgb(44, 218, 163);
+  padding: 1rem;
+  border-radius: 2rem;
+  align-items: center;
+
 }
 .data-head div h3 {
   margin-left: 2rem;
+  color: white;
 }
+.data-head div h3:nth-child(1) {
+ color: rgb(13, 168, 225);
+ font-size: 1.7rem;
+  }
 .card {
   border-radius: 12.8028px;
   background-color: #f9f9f9;
@@ -67,12 +87,39 @@ h3 {
   color: rgb(44, 218, 163);
   transition: 0.3s ease-in;
 }
+.btn-container button:focus{
+    outline: none;    
+}
 
+
+/* media queries for responsiveness */
 @media screen and (max-width: 398px) {
   .container {
     flex-flow: column;
   }
   header {
     text-align: center;
+  }
+  .top,
+  .overall,
+  .container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .top,
+  .overall,
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .top,
+  .overall,
+  .container {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
