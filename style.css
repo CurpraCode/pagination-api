@@ -1,0 +1,32 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing:border-box;
+}
+htm{
+    background-color: aliceblue;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    align-items: center;
+    margin-top: 30px;
+}
+.card{
+    border-radius: 12.8028px;
+    background-color: #f9f9f9;
+    box-shadow: -9.1159px -18.2318px 24.3091px #fff, 9.1159px 18.2318px 24.3091px #eceef1;
+    width:200px;
+    margin-bottom: 30px;
+    padding: 2rem 0rem;
+}
+h3{
+    text-align: center;
+}
+
+.card div{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+}
